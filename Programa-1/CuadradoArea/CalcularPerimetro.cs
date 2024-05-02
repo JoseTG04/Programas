@@ -74,24 +74,33 @@
             decimal Suma = 0;
             decimal Promedio = 0;
 
-            Console.WriteLine("Digite el primer número: ");
-            num1 = Convert.ToDecimal(Console.ReadLine());
 
-            Console.WriteLine("Digite el segundo número: ");
-            num2 = Convert.ToDecimal(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Digite el primer número: ");
+                num1 = Convert.ToDecimal(Console.ReadLine());
 
-            Console.WriteLine("Digite el tercer número: ");
-            num3 = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine("Digite el segundo número: ");
+                num2 = Convert.ToDecimal(Console.ReadLine());
 
-            Console.WriteLine("Digite el cuarto número: ");
-            num4 = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine("Digite el tercer número: ");
+                num3 = Convert.ToDecimal(Console.ReadLine());
 
-            Suma = (num1 + num2 + num3 + num4);
-            Promedio = (Suma / 4);
+                Console.WriteLine("Digite el cuarto número: ");
+                num4 = Convert.ToDecimal(Console.ReadLine());
 
-            Console.WriteLine($"Resultado de la suma de los números: {Suma}");
-            Console.WriteLine($"Resultado del promedio: {Promedio}");
+                Suma = (num1 + num2 + num3 + num4);
+                Promedio = (Suma / 4);
 
+                Console.WriteLine($"Resultado de la suma de los números: {Suma}");
+                Console.WriteLine($"Resultado del promedio: {Promedio}");
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"Ha ocurrido el siguiente error: {ex.Message} al realizar el cálculo");
+            }
+            
         }
 
 
